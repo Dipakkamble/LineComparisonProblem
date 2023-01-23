@@ -33,13 +33,18 @@ namespace LineComparisonProblem
 
             lengthOfLine2 = Math.Sqrt(Math.Pow((x4 - x3), 2) + Math.Pow((y4 - y3), 2));
             Console.WriteLine("Length of line:" + lengthOfLine2);
-            if (lengthOfLine.Equals(lengthOfLine2))
+
+            if (lengthOfLine.CompareTo(lengthOfLine2) > 0)
             {
-                Console.WriteLine("Both the lines are equal");
+                Console.WriteLine("first line is greater than second line");
+            }
+            else if (lengthOfLine.CompareTo(lengthOfLine2) < 0) 
+            {
+                Console.WriteLine("first line is less than second line");
             }
             else
             {
-                Console.WriteLine("lines are not equal");
+                Console.WriteLine("Both lines are equal");
             }
             Console.ReadLine();
         }
